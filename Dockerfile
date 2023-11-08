@@ -5,7 +5,7 @@ FROM node:14
 WORKDIR /app
 
 # Clone the 2048 game code from a public repository (replace with the actual repository URL)
-RUN git clone https://github.com/yourusername/2048-game.git .
+RUN git clone https://github.com/gabrielecirulli/2048.git
 
 # Install the game dependencies
 RUN npm install
