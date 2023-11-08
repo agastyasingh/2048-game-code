@@ -14,4 +14,4 @@ RUN npm install
 EXPOSE 8000
 
 # Start the Node.js application (modify the entry point if necessary)
-CMD [ "node", "server.js" ]
+CMD [ "node", "app.js" ]
