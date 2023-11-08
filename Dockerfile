@@ -4,20 +4,14 @@ FROM node:14
 # Set the working directory in the container
 WORKDIR /app
 
-RUN git clone https://github.com/gabrielecirulli/2048.git .
-
-# Copy package.json and package-lock.json to the container
-COPY package*.json ./
+# Clone the 2048 game code from a public repository (replace with the actual repository URL)
+RUN git clone https://github.com/yourusername/2048-game.git .
 
 # Install the game dependencies
 RUN npm install
 
-# Copy the rest of your application code to the container
-COPY . .
-
-# Expose the port the application will run on
+# Expose port 8000
 EXPOSE 8000
 
-# Start the Node.js application
-CMD [ "node", "application.js" ]
-
+# Start the Node.js application (modify the entry point if necessary)
+CMD [ "node", "server.js" ]
