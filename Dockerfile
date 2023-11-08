@@ -17,5 +17,5 @@ COPY . .
 EXPOSE 8000
 
 # Start the Node.js application
-CMD [ "node", "server.js" ]
+CMD [ "node", "application.js" ]
 
