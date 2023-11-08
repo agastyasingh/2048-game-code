@@ -4,6 +4,8 @@ FROM node:14
 # Set the working directory in the container
 WORKDIR /app
 
+RUN git clone https://github.com/gabrielecirulli/2048.git .
+
 # Copy package.json and package-lock.json to the container
 COPY package*.json ./
 
