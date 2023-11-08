@@ -13,5 +13,9 @@ RUN npm install
 # Expose port 8000
 EXPOSE 8000
 
-# Start the Node.js application (modify the entry point if necessary)
-CMD [ "node", "/js/application.js" ]
+# Install a simple HTTP server
+RUN npm install http-server -g
+
+# Start the HTTP server to serve the game
+CMD ["http-server", "-p", "8000"]
+
